@@ -32,7 +32,10 @@ app.use('/users', users);
 app.use('/articles', articles);
 
 // connect with mongoose
+// LOCAL
 mongoose.connect('mongodb://localhost/test');
+// live
+mongoose.connect('mongodb://<dbuser>:<dbpass>@ds048368.mongolab.com:48368/mongo-demo');
 
 // check connection
 var db = mongoose.connection;
